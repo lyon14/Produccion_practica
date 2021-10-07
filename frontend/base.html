@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+        <!-- Css -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <!--  Boostrap CSS  -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.1.2/css/bootstrap.min.css') }}">
+        <title>{{ title }}</title>
+    </head>
+<body>
+
+    <header>
+        <div class="logo_nav">
+            <a href="#"><img src="{{ url_for('static', filename='img/logo_ucen.png') }}" alt=""></a>     
+        </div>
+        <div class="btn_sesion">
+            <button type="button" class="btn btn-warning">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <nav>
+        <!--<div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Solicitar Práctica</a>
+            <a href="#">Finalizar Práctica</a>
+            <a href="#">Convocatorias</a>
+        </div>-->
+
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!--  Boostrap JS  -->
+    <script src="{{ url_for('static', filename='bootstrap-5.1.2/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

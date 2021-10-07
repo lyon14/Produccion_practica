@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+/* HEADER */
+
+header {
+    max-width: 1920px;
+    display: flex;
+    justify-content:space-between;
+	align-items:center;
+    background: #4eeccd;
+    padding: 15px 30px;
+}
+
+.logo_nav {
+    width: 20%;
+    padding: 5px 5px;
+}
+
+.logo_nav img{
+    width: 100%;
+}
+
+.btn_sesion{
+    width: 10%;
+}
+.btn_sesion button{
+    width: 100%;
+}
+/* FIN HEADER */
+
+/* SIDEPANEL */
+
+nav{
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background: #575757;
+    padding: 0 2px;
+}
+
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #575757;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 5px 0 5px 0;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+    border: 2px solid #575757;
+}
+
+.openbtn:hover{
+    border: 2px solid white;
+}
+
+/* FIN SIDEPANEL */
