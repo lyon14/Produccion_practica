@@ -40,9 +40,9 @@ header {
 }
 /* FIN HEADER */
 
-/* SIDEPANEL */
+/* Boton Menu */
 
-nav{
+.btn_menu{
     max-width: 1920px;
     display: flex;
     flex-wrap: wrap;
@@ -72,4 +72,67 @@ nav{
     border: 2px solid white;
 }
 
-/* FIN SIDEPANEL */
+/* FIN Boton Menu */
+
+
+/* Slidevar Menu */
+
+.sidepanel{
+    display: flex;
+    width: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-right: 1px solid #B6B6B6;
+    transition: 0.5s;
+    z-index: 1;
+    overflow-x: hidden;
+    position: fixed;
+}
+.user_sidepanel{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 4px 10px;
+    border-bottom: 1px solid #B6B6B6;
+}
+
+.user_sidepanel h2{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.user_sidepanel .closebtn{
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.user_sidepanel a:hover{
+    color: #B6B6B6;
+}
+
+.menu_sidepanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidepanel .menu_sidepanel a{
+    text-decoration: none;
+    padding: 15px 15px;
+    border-bottom: 1px solid #B6B6B6;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    transition: 0.3s;
+}
+
+.sidepanel .menu_sidepanel a:hover{
+    color: #B6B6B6;
+}
+
+/* Fin Slidevar Menu */
+
