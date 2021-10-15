@@ -10,7 +10,7 @@ app = Flask(__name__, template_folder=templateFrontend)
 
 @app.route('/')
 def index(name=None):
-    return render_template('index.html', title='ucen', name=name)
+    return render_template('index.html', title='ucen', usuario='cordinador', name=name)
 
 
 if __name__ == '__main__':

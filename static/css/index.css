@@ -134,5 +134,53 @@ header {
     color: #B6B6B6;
 }
 
+.sidepanel .drop_menu_sidepanel{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 4px 10px;
+    border-bottom: 1px solid #B6B6B6;
+}
+
+.sidepanel .drop_menu_sidepanel h2{
+    font-size: 22px;
+    color: black;
+    font-weight: 600;
+}
+
+.sidepanel .drop_menu_sidepanel .dropdown-btn{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidepanel .drop_menu_sidepanel a:hover{
+    color: #B6B6B6;
+}
+
+
+.sidepanel .dropdown_container_practicantes{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidepanel .dropdown_container_practicantes a{
+    text-decoration: none;
+    padding: 10px 12px;
+    border-bottom: 1px solid #B6B6B6;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    transition: 0.3s;
+}
+
+.sidepanel .dropdown_container_practicantes a:hover{
+    color: #B6B6B6;
+}
+
 /* Fin Slidevar Menu */
 
