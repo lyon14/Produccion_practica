@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+        
         <!-- Css -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
         <!--  Boostrap CSS  -->
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.1.2/css/bootstrap.min.css') }}">
-        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
         <title>{{ title }}</title>
     </head>
 <body>
@@ -17,8 +17,9 @@
         <div class="logo_nav">
             <a href="#"><img src="{{ url_for('static', filename='img/logo_ucen.png') }}" alt=""></a>     
         </div>
+        
         <div class="btn_sesion">
-            <button type="button" class="btn btn-warning">Iniciar Sesión</button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal_sesion">Iniciar Sesión</button>
         </div>
     </header>
 
@@ -38,8 +39,8 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
             <div class="menu_sidepanel">
-                <a href="#"><img src="{{ url_for('static', filename='img/solicitante.png') }}" alt=""> Solicitar Práctica</a>
-                <a href="#"><img src="{{ url_for('static', filename='img/archivo.png') }}" alt=""> Finalizar Práctica</a>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_solPractica"><img src="{{ url_for('static', filename='img/solicitante.png') }}" alt=""> Solicitar Práctica</a>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_finPractica"><img src="{{ url_for('static', filename='img/archivo.png') }}" alt=""> Finalizar Práctica</a>
                 <a href="#"><img src="{{ url_for('static', filename='img/peticion.png') }}" alt=""> Convocatorias</a>
             </div>
 
@@ -55,7 +56,7 @@
             </div>
             <div class="menu_sidepanel">
                 <a href="#"><img src="{{ url_for('static', filename='img/lista-de-invitados.png') }}" alt=""> Mostrar Practicante</a>
-                <a href="#"><img src="{{ url_for('static', filename='img/dos-empresarios.png') }}" alt=""> Proponer Práctica</a>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_proPractica"><img src="{{ url_for('static', filename='img/dos-empresarios.png') }}" alt=""> Proponer Práctica</a>
                 <a href="#"><img src="{{ url_for('static', filename='img/evaluar.png') }}" alt=""> Evaluar Practicante</a>
             </div>
 
@@ -94,6 +95,10 @@
 
         </nav>
     {% endif %}
+    <!--  Fin Administracion Menu  -->
+
+    {% include "modales.html" %}
+    {% block modales %}{% endblock %}
     
 
     <div class="container">

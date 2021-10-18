@@ -1,0 +1,207 @@
+{% block modales %}
+<!--  Modales  -->
+
+<!--  Practicante  -->
+<!--  solicitar practica  -->
+<div class="modal fade" id="myModal_solPractica">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+
+            <!--  modal header  -->
+            <div class="modal-header">
+                <h4 class="modal-title">Solicitar Práctica</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Carrera</label>
+                        <select name="" id="" class="form-select">
+                            <option selected value="">Informatica</option>
+                            <option value="">Industrial</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Tipo de Practica</label>
+                        <select name="" id="" class="form-select">
+                            <option selected value="">Operacional</option>
+                            <option value="">Profesional</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Nombre de la Empresa</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Nombre de la persona a quien se dirige la carta</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Cargo de la persona a quien se dirige la carta</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Teléfonos de Contacto persona a quien se dirige la carta</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Correo Electrónico de la persona a quién se dirige la carta</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Nombre Completo del Alumno</label>
+                        <input type="text" class="form-control"value="Danilo Jofre" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Rut del Alumno</label>
+                        <input type="text" class="form-control" value="19.915.769-8" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Teléfono para recados</label>
+                        <input type="text" class="form-control" value="953449965" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="" class="form-label">Dirección e-mail para remitir información</label>
+                        <input type="text" class="form-control" value="exampo@email.com" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="d-grid gap-2 col-3 mx-auto">
+                        <button type="submit" class="btn btn-warning">Solicitar</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--  fin solicitar practica  -->
+
+<div class="modal fade" id="myModal_proPractica">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+
+            <!--  modal header  -->
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center">Proponer Practica</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form class="row g-3">
+
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Nombre de la Empresa</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Rut de la Empresa</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Giro</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Dirección de la Empresa</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Comuna/Ciudad</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Contacto</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Cargo del Empleador</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Télefono</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Correo Electrónico</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Periodo de Practica</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Conocimientos que solicita</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaConoci" style="height: 100px; max-height: 300px;"></textarea>
+                            <label for="floatingTextareaConoci">Conocimientos</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Beneficios al Practicante</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaBenef" style="height: 100px; max-height: 300px;"></textarea>
+                            <label for="floatingTextareaBenef">Beneficios</label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 col-3 mx-auto">
+                        <button type="submit" class="btn btn-warning">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--  Modal De inicio de sesion  -->
+<div class="modal fade" id="myModal_sesion">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!--  modal header  -->
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center">Iniciar Sesion</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="row g-3">
+                    <div class="col-md-12">
+                        <label for="" class="form-label">Email:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="" class="form-label">Contraseña:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-warning">Iniciar Sesion</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--  fin Modal De inicio de sesion  -->
+
+{% endblock %}
