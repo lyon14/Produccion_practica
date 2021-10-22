@@ -7,11 +7,15 @@ templateFrontend = os.path.abspath('C:/Users/jiyen/Desktop/carpeta de carpetas/P
 #C:\Users\jiyen\Desktop\carpeta de carpetas\Produccion_practica\frontend
 app = Flask(__name__, template_folder=templateFrontend)
 
+user='empleador'
 
 @app.route('/')
 def index(name=None):
-    return render_template('index.html', title='ucen', usuario='practicante', name=name)
+    return render_template('index.html', usuario=user, name=name)
 
+@app.route('/empEvalPracticante')
+def empEvalPracticante(name=None):
+    return render_template('empEvaluarPracticante.html', usuario=user, name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)

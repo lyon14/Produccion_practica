@@ -65,7 +65,7 @@ header {
     margin: 5px 0 5px 0;
     transition-duration: 0.4s;
     border-radius: 4px;
-    border: 2px solid #575757;
+    border: 2px solid transparent;
 }
 
 .openbtn:hover{
@@ -184,4 +184,29 @@ header {
 
 
 /* Fin Slidevar Menu */
+
+.container_content{
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_content .tamano_tabla{
+    width: 80%;
+    
+}
+
+.titulo_centrado{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.titulo_centrado h3{
+    font-size: 30px;
+    color: black;
+    font-weight: 800;
+    padding: 20px 0;
+}
 

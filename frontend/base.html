@@ -9,7 +9,7 @@
         <!--  Boostrap CSS  -->
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.1.2/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
-        <title>{{ title }}</title>
+        <title>ucen</title>
     </head>
 <body>
 
@@ -57,7 +57,7 @@
             <div class="menu_sidepanel">
                 <a href="#"><img src="{{ url_for('static', filename='img/lista-de-invitados.png') }}" alt=""> Mostrar Practicante</a>
                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_proPractica"><img src="{{ url_for('static', filename='img/dos-empresarios.png') }}" alt=""> Proponer Práctica</a>
-                <a href="#"><img src="{{ url_for('static', filename='img/evaluar.png') }}" alt=""> Evaluar Practicante</a>
+                <a href="empEvalPracticante"><img src="{{ url_for('static', filename='img/evaluar.png') }}" alt=""> Evaluar Practicante</a>
             </div>
 
         </nav>
@@ -101,7 +101,7 @@
     {% block modales %}{% endblock %}
     
 
-    <div class="container">
+    <div class="container_content">
         {% block content %}{% endblock %}
     </div>
 
