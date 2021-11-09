@@ -7,7 +7,7 @@ templateFrontend = os.path.abspath('C:/Users/jiyen/Desktop/carpeta de carpetas/P
 #C:\Users\jiyen\Desktop\carpeta de carpetas\Produccion_practica\frontend
 app = Flask(__name__, template_folder=templateFrontend)
 
-user='empleador'
+user='practicante'
 
 @app.route('/')
 def index(name=None):

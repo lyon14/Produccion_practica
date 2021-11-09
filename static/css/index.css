@@ -210,3 +210,8 @@ header {
     padding: 20px 0;
 }
 
+.subtitulo_evaluacion{
+    font-size: 17px;
+    color: black;
+    font-weight: 800;
+}
