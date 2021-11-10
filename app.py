@@ -17,5 +17,9 @@ def index(name=None):
 def empEvalPracticante(name=None):
     return render_template('empEvaluarPracticante.html', usuario=user, name=name)
 
+@app.route('/practFinalizarPractica')
+def practFinalizarPractica(name=None):
+    return render_template('practFinalizarPractica.html', usuario=user, name=name)
+
 if __name__ == '__main__':
     app.run(debug=True)
