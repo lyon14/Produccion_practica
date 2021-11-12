@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="titulo_centrado">
+    <h3>Practicas Actuales</h3>
+</div>
+<table class="tamano_tabla table">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-center">Nombre</th>
+        <th scope="col" class="text-center">Carrera</th>
+        <th scope="col" class="text-center">Rut</th>
+        <th scope="col" class="text-center">Email</th>
+        <th scope="col" class="text-center">ID practica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-center">1</th>
+        <td class="text-center">Juan Yevenes</td>
+        <td class="text-center">Ing. Civil Informatica</td>
+        <td class="text-center">19.915.769-8</td>
+        <td class="text-center">prac@email.com</td>
+        <td class="text-center">1233</td>
+      </tr>
+
+      <tr>
+        <th scope="row" class="text-center">2</th>
+        <td class="text-center">Danilo jofre</td>
+        <td class="text-center">Ing. Civil Industrial</td>
+        <td class="text-center">19.925.753-8</td>
+        <td class="text-center">prac@email.com</td>
+        <td class="text-center">3321</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+{% endblock %}

@@ -25,5 +25,13 @@ def practFinalizarPractica(name=None):
 def solicitudesDePracticante(name=None):
     return render_template('solicitudesDePracticante.html', usuario=user, name=name)
 
+@app.route('/verPracticasActuales')
+def verPracticasActuales(name=None):
+    return render_template('verPracticasActuales.html', usuario=user, name=name)
+
+@app.route('/listaDePracticantes')
+def listaDePracticantes(name=None):
+    return render_template('listaDePracticantes.html', usuario=user, name=name)
+
 if __name__ == '__main__':
     app.run(debug=True)
