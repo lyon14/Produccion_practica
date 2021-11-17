@@ -220,3 +220,55 @@ header {
 .tamano_tabla .btn_docs{
     font-weight: 600;
 }
+
+/* Inicio Convocatorias  */
+
+.container_content .container_convocatorias{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.convocatoria{
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 8px #00000029;
+    border-radius: 8px;
+    padding: 50px 35px;
+    margin: 15px;
+}
+.titulo_convocatoria{
+    margin-bottom: 6px;
+}
+
+.titulo_convocatoria a{
+    font-size: 16px;
+    color: #2BA6E2;
+    text-decoration: none;
+}
+
+.descriptor p{
+    font-size: 14px;
+}
+
+.tipo_practica{
+    background: #b3b3b3;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.tipo_practica p {
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+.nombre_empresa p{
+    font-size: 15px;
+}
+/* Fin Convocatorias  */

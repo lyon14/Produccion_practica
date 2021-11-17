@@ -7,7 +7,7 @@ templateFrontend = os.path.abspath('C:/Users/jiyen/Desktop/carpeta de carpetas/P
 #C:\Users\jiyen\Desktop\carpeta de carpetas\Produccion_practica\frontend
 app = Flask(__name__, template_folder=templateFrontend)
 
-user='cordinador'
+user='practicante'
 
 @app.route('/')
 def index(name=None):
@@ -32,6 +32,10 @@ def verPracticasActuales(name=None):
 @app.route('/listaDePracticantes')
 def listaDePracticantes(name=None):
     return render_template('listaDePracticantes.html', usuario=user, name=name)
+
+@app.route('/convocatorias')
+def convocatorias(name=None):
+    return render_template('convocatorias.html', usuario=user, name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)
