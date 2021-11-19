@@ -37,5 +37,9 @@ def listaDePracticantes(name=None):
 def convocatorias(name=None):
     return render_template('convocatorias.html', usuario=user, name=name)
 
+@app.route('/convocatoria')
+def convocatoria(name=None):
+    return render_template('convocatoria.html', usuario=user, name=name)
+
 if __name__ == '__main__':
     app.run(debug=True)
