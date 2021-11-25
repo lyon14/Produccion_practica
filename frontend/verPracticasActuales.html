@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-center">id practicante</th>
         <th scope="col" class="text-center">Nombre</th>
         <th scope="col" class="text-center">Carrera</th>
         <th scope="col" class="text-center">Rut</th>
@@ -16,23 +17,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row" class="text-center">1</th>
-        <td class="text-center">Juan Yevenes</td>
-        <td class="text-center">Ing. Civil Informatica</td>
-        <td class="text-center">19.915.769-8</td>
-        <td class="text-center">prac@email.com</td>
-        <td class="text-center">1233</td>
-      </tr>
+
+      {% for rows in range(0, len) %}
 
       <tr>
-        <th scope="row" class="text-center">2</th>
-        <td class="text-center">Danilo jofre</td>
-        <td class="text-center">Ing. Civil Industrial</td>
-        <td class="text-center">19.925.753-8</td>
-        <td class="text-center">prac@email.com</td>
-        <td class="text-center">3321</td>
+        <th scope="row" class="text-center">{{rows+1}}</th>
+        <td class="text-center">{{lista_practicantes[rows][0]}}</td>
+        <td class="text-center">{{lista_practicantes[rows][1]}}</td>
+        <td class="text-center">{{lista_practicantes[rows][2]}}</td>
+        <td class="text-center">{{lista_practicantes[rows][3]}}</td>
+        <td class="text-center">{{lista_practicantes[rows][4]}}</td>
+        <td class="text-center">{{lista_practicantes[rows][5]}}</td>
       </tr>
+
+      {% endfor %}
+      
 
     </tbody>
   </table>

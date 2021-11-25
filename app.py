@@ -3,11 +3,25 @@ from flask import render_template
 from flask import Flask, url_for
 import os
 
+import psycopg2
+
+
+
+conn = psycopg2.connect(host="localhost", database="practica", user="postgres", password="rosita14")
+
+def practicasActuales():
+    cur = conn.cursor()
+    comando = "select p.id_practicante,m.nombre_completo,c.nombre_carrera,m.rut,m.email,a.id_practica from usuario as m join practicante as p on p.id_usuario = m.id_usuario join carrera as c on c.id_carrera = p.id_carrera join practica as a on a.id_practicante = p.id_practicante where a.estado_practica = 0"
+    cur.execute(comando)
+    rows = cur.fetchall()
+    return rows
+
+
 templateFrontend = os.path.abspath('C:/Users/jiyen/Desktop/carpeta de carpetas/Produccion_practica/frontend')
 #C:\Users\jiyen\Desktop\carpeta de carpetas\Produccion_practica\frontend
 app = Flask(__name__, template_folder=templateFrontend)
 
-user='practicante'
+user='cordinador'
 
 @app.route('/')
 def index(name=None):
@@ -27,10 +41,12 @@ def solicitudesDePracticante(name=None):
 
 @app.route('/verPracticasActuales')
 def verPracticasActuales(name=None):
-    return render_template('verPracticasActuales.html', usuario=user, name=name)
+    lista = practicasActuales()
+    return render_template('verPracticasActuales.html', usuario=user, len = len(lista), lista_practicantes = lista, name=name)
 
 @app.route('/listaDePracticantes')
 def listaDePracticantes(name=None):
+    
     return render_template('listaDePracticantes.html', usuario=user, name=name)
 
 @app.route('/convocatorias')
