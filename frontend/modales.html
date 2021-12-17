@@ -15,69 +15,72 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form action="" class="row g-3">
+                <form class="row g-3" id="solicitarPractica">
                     <div class="col-md-6">
-                        <label for="" class="form-label">Carrera</label>
-                        <select name="" id="" class="form-select">
-                            <option selected value="">Informatica</option>
-                            <option value="">Industrial</option>
+                        <label for="carrera" class="form-label">Carrera</label>
+                        <select name="carrera" id="carrera" class="form-select">
+                            <option selected value="informatica">Informatica</option>
+                            <option value="industrial">Industrial</option>
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <label for="" class="form-label">Tipo de Practica</label>
-                        <select name="" id="" class="form-select">
-                            <option selected value="">Operacional</option>
-                            <option value="">Profesional</option>
+                        <label for="tipo_practica" class="form-label">Tipo de Practica</label>
+                        <select name="tipo_practica" id="tipo_practica" class="form-select">
+                            <option selected value="operacional">Operacional</option>
+                            <option value="profesional">Profesional</option>
                         </select>
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Nombre de la Empresa</label>
-                        <input type="text" class="form-control">
+                        <label for="nombre_Empresa" class="form-label">Nombre de la Empresa</label>
+                        <input type="text" name="nombre_Empresa" id="nombre_Empresa" class="form-control">
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Nombre de la persona a quien se dirige la carta</label>
-                        <input type="text" class="form-control">
+                        <label for="destinatario" class="form-label">Nombre de la persona a quien se dirige la carta</label>
+                        <input type="text" name="destinatario" id="destinatario" class="form-control">
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Cargo de la persona a quien se dirige la carta</label>
-                        <input type="text" class="form-control">
+                        <label for="cargo_destinatario" class="form-label">Cargo de la persona a quien se dirige la carta</label>
+                        <input type="text" name="cargo_destinatario" id="cargo_destinatario" class="form-control">
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Teléfonos de Contacto persona a quien se dirige la carta</label>
-                        <input type="text" class="form-control">
+                        <label for="telefono_destinatario" class="form-label">Teléfonos de Contacto persona a quien se dirige la carta</label>
+                        <input type="text" name="telefono_destinatario" id="telefono_destinatario" class="form-control">
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Correo Electrónico de la persona a quién se dirige la carta</label>
-                        <input type="text" class="form-control">
+                        <label for="email_destinatario" class="form-label">Correo Electrónico de la persona a quién se dirige la carta</label>
+                        <input type="text" name="email_destinatario" id="email_destinatario" class="form-control">
+                    </div>
+
+                    <input type="hidden" class="id_usuario" name="id_usuario" id="id_usuario" value="{{session.id_usuario}}">
+
+                    <div class="col-12">
+                        <label for="nombre_alumno" class="form-label">Nombre Completo del Alumno</label>
+                        <input type="text" class="form-control" value="{{session.nombre}}" id="nombre_alumno" name="nombre_alumno" aria-label="Disabled input example" disabled readonly>
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Nombre Completo del Alumno</label>
-                        <input type="text" class="form-control"value="Danilo Jofre" aria-label="Disabled input example" disabled readonly>
+                        <label for="rut_alumno" class="form-label">Rut del Alumno</label>
+                        <input type="text" class="form-control" value="{{session.rut}}" name="rut_alumno" id="rut_alumno" aria-label="Disabled input example" disabled readonly>
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Rut del Alumno</label>
-                        <input type="text" class="form-control" value="19.915.769-8" aria-label="Disabled input example" disabled readonly>
+                        <label for="telefono_alumno" class="form-label">Teléfono para recados</label>
+                        <input type="text" class="form-control" value="{{session.telefono}}" name="telefono_alumno" id="telefono_alumno" aria-label="Disabled input example" disabled readonly>
                     </div>
 
                     <div class="col-12">
-                        <label for="" class="form-label">Teléfono para recados</label>
-                        <input type="text" class="form-control" value="953449965" aria-label="Disabled input example" disabled readonly>
+                        <label for="email_alumno" class="form-label">Dirección e-mail para remitir información</label>
+                        <input type="text" class="form-control" value="{{session.email}}" name="email_alumno" id="email_alumno" aria-label="Disabled input example" disabled readonly>
                     </div>
-
-                    <div class="col-12">
-                        <label for="" class="form-label">Dirección e-mail para remitir información</label>
-                        <input type="text" class="form-control" value="exampo@email.com" aria-label="Disabled input example" disabled readonly>
-                    </div>
+                    
 
                     <div class="d-grid gap-2 col-3 mx-auto">
-                        <button type="submit" class="btn btn-warning">Solicitar</button>
+                        <button type="submit" id="solicitarPractica_btn" class="btn btn-warning">Solicitar</button>
                     </div>
                     
                 </form>
@@ -184,17 +187,17 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form action="" class="row g-3">
+                <form class="row g-3" id="formLogin">
                     <div class="col-md-12">
-                        <label for="" class="form-label">Email:</label>
-                        <input type="text" class="form-control">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" id="email" class="form-control">
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Contraseña:</label>
-                        <input type="text" class="form-control">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="password" id="password" class="form-control">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-warning">Iniciar Sesion</button>
+                        <button type="submit" id="login_btn" class="btn btn-warning">Iniciar Sesion</button>
                     </div>
                 </form>
             </div>
@@ -847,48 +850,49 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form action="" class="row g-3">
+                <form action="" class="row g-3" id="solicitud_practicante">
+                    <input type="hidden" class="id_solicitud" name="id_solicitud" id="id_solicitud">
                     <div class="col-md-12">
-                        <label for="" class="form-label">Nombre de la Empresa:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Empresa ejemplo" disabled>
+                        <label for="nombre_empresa" class="form-label">Nombre de la Empresa:</label>
+                        <input type="text" id="disabledTextInput" class="form-control nombre_empresa" name="nombre_empresa" placeholder="Empresa ejemplo" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Nombre de la persona a quien se dirige la carta:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="director jofre" disabled>
+                        <label for="destinatario" class="form-label">Nombre de la persona a quien se dirige la carta:</label>
+                        <input type="text" id="disabledTextInput" class="form-control destinatario" name="destinatario" placeholder="director jofre" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Cargo de la persona a quien se dirige la carta:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Director" disabled>
+                        <label for="cargo_destinatario" class="form-label">Cargo de la persona a quien se dirige la carta:</label>
+                        <input type="text" id="disabledTextInput" class="form-control cargo_destinatario" name="cargo_destinatario" placeholder="Director" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Teléfonos de Contacto persona a quién dirige la carta:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="+569 5544 3322" disabled>
+                        <label for="telefono_destinatario" class="form-label">Teléfonos de Contacto persona a quién dirige la carta:</label>
+                        <input type="text" id="disabledTextInput" class="form-control telefono_destinatario" placeholder="+569 5544 3322" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Correo Electrónico persona a quién dirige la carta:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="director@email.com" disabled>
+                        <label for="email_destinatario" class="form-label">Correo Electrónico persona a quién dirige la carta:</label>
+                        <input type="text" id="disabledTextInput" class="form-control email_destinatario" placeholder="director@email.com" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Nombre completo del Alumno:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Danilo Jofre" disabled>
+                        <label for="nombre_alumno" class="form-label">Nombre completo del Alumno:</label>
+                        <input type="text" id="disabledTextInput" class="form-control nombre_alumno" placeholder="Danilo Jofre" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">RUT del Alumno:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="19.915.760-8" disabled>
+                        <label for="rut_alumno" class="form-label">RUT del Alumno:</label>
+                        <input type="text" id="disabledTextInput" class="form-control rut_alumno" placeholder="19.915.760-8" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Teléfono para recados:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="+569 2255 3312" disabled>
+                        <label for="telefono_alumno" class="form-label">Teléfono para recados:</label>
+                        <input type="text" id="disabledTextInput" class="form-control telefono_alumno" placeholder="+569 2255 3312" disabled>
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Dirección e-mail para remitir información:</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="practicante@email.com" disabled>
+                        <label for="email_alumno" class="form-label">Dirección e-mail para remitir información:</label>
+                        <input type="text" id="disabledTextInput" class="form-control email_alumno" placeholder="practicante@email.com" disabled>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-warning">Aprobar</button>
+                        <button type="submit" id="btn_aprobar_solicitud" value="1" class="btn btn-warning">Aprobar</button>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-danger">Rechazar</button>
+                        <button type="submit" id="btn_rechazar_solicitud" value="2" class="btn btn-danger">Rechazar</button>
                     </div>
                 </form>
             </div>

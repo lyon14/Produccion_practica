@@ -17,10 +17,21 @@
         <div class="logo_nav">
             <a href="#"><img src="{{ url_for('static', filename='img/logo_ucen.png') }}" alt=""></a>     
         </div>
-        
+        {% if session.logged_in %}
         <div class="btn_sesion">
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal_sesion">Iniciar Sesión</button>
+            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >perfil</button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="/logout" class="dropdown-item">Cerrar Sesion</a></li>
+            </ul>
         </div>
+        {% else %}
+            <div class="btn_sesion">
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal_sesion">Iniciar Sesión</button>
+            </div>
+        {% endif %}
+        
     </header>
 
     <nav class="btn_menu">
@@ -62,12 +73,12 @@
 
         </nav>
     
-    {% elif usuario == "cordinador"%}
+    {% elif usuario == "coordinador"%}
         <!--  Cordinador  -->
         <nav id="mySidepanel" class="sidepanel">
         
             <div class="user_sidepanel">
-                <h2>Cordinador</h2>
+                <h2>Coordinador</h2>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
             
@@ -105,8 +116,11 @@
         {% block content %}{% endblock %}
     </div>
 
-
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
     <script src="{{ url_for('static', filename='js/sidepanel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/formularios.js') }}"></script>
     <!--  Boostrap JS  -->
     <script src="{{ url_for('static', filename='bootstrap-5.1.2/js/bootstrap.bundle.min.js') }}"></script>
 </body>

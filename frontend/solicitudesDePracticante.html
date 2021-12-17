@@ -4,7 +4,7 @@
 <div class="titulo_centrado">
     <h3>Solicitudes de Practicantes</h3>
 </div>
-<table class="tamano_tabla table">
+<table class="tamano_tabla table tablaSolicitudesPracticante">
     <thead>
       <tr>
         <th scope="col" class="text-center">#</th>
@@ -15,27 +15,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row" class="text-center">1</th>
-        <td class="text-center">Juan Yevenes</td>
-        <td class="text-center">19.915.769-8</td>
-        <td class="text-center">Aprobada <img src="{{ url_for('static', filename='img/tick.png') }}" alt="" style="width: 22px;"></td>
-        <td class="text-center"><button type="button" class="btn btn-warning btn_docs" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_solDePracticante" disabled>Generar Documento de Practica</button></td>
-      </tr>
-      <tr>
-        <th scope="row" class="text-center">2</th>
-        <td class="text-center">Danilo Jofre</td>
-        <td class="text-center">19.945.776-2</td>
-        <td class="text-center">Rechazado <img src="{{ url_for('static', filename='img/rejected.png') }}" alt="" style="width: 22px;"></td>
-        <td class="text-center"><button type="button" class="btn btn-warning btn_docs" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_solDePracticante_informatica" disabled>Generar Documento de Practica</button></td>
-      </tr>
-      <tr>
-        <th scope="row" class="text-center">2</th>
-        <td class="text-center">Danilo Jofre</td>
-        <td class="text-center">19.945.776-2</td>
-        <td class="text-center">En Espera <img src="{{ url_for('static', filename='img/reloj-contorno-circular.png') }}" alt="" style="width: 22px;"></td>
-        <td class="text-center"><button type="button" class="btn btn-warning btn_docs" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal_solDePracticante_informatica" >Generar Documento de Practica</button></td>
-      </tr>
+
+      {% for rows in range(0, len) %}
+
+        <tr>
+          <th scope="row" class="text-center">{{rows+1}}</th>
+          <td class="text-center">{{lista_practicantes[rows][4]}}</td>
+          <td class="text-center">{{lista_practicantes[rows][5]}}</td>
+          {% if lista_practicantes[rows][2] == 0 %}
+            <td class="text-center">En Espera <img src="{{ url_for('static', filename='img/reloj-contorno-circular.png') }}" alt="" style="width: 22px;"></td>
+          {% elif lista_practicantes[rows][2] == 1 %}
+            <td class="text-center">Aprobada <img src="{{ url_for('static', filename='img/tick.png') }}" alt="" style="width: 22px;"></td>
+          {% elif lista_practicantes[rows][2] == 2 %}
+            <td class="text-center">Rechazado <img src="{{ url_for('static', filename='img/rejected.png') }}" alt="" style="width: 22px;"></td>
+          {% endif %}
+
+          {% if lista_practicantes[rows][2] != 0 %}
+            <td class="text-center"><button type="button" class="btn btn-warning btn_docs" href="javascript:void(0)" id="GenerarDoc_btn" id_solicitud="{{lista_practicantes[rows][0]}}" data-bs-toggle="modal" data-bs-target="#myModal_solDePracticante" disabled>Generar Documento de Practica</button></td>
+          {% else %}
+            <td class="text-center"><button type="button" class="btn btn-warning btn_docs" href="javascript:void(0)" id="GenerarDoc_btn" id_solicitud="{{lista_practicantes[rows][0]}}" data-bs-toggle="modal" data-bs-target="#myModal_solDePracticante_informatica" >Generar Documento de Practica</button></td>
+          {% endif %}
+          
+        </tr>
+        
+      {% endfor %}
+
     </tbody>
 </table>
 
